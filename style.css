@@ -1,0 +1,90 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffccda;
+  color: #ffccda;
+  font-family: "League Gothic", sans-serif;
+}
+
+.main-container {
+  background-color: #990029;
+  border-radius: 20px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.score-board {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fe0044;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 30px;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.score {
+  font-size: 50px;
+  font-family: "League Gothic", sans-serif;
+}
+
+.three-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.move-button {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 60px;
+  background-color: #fe0044;
+  border-radius: 20px;
+  gap: 20px;
+  padding: 20px;
+  flex: 1;
+  width: 180px;
+}
+
+.emoji {
+  font-size: 90px;
+}
+
+.arena {
+  background-color: #fe0044;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+#player-move,
+#computer-move {
+  font-size: 55px;
+}
+
+.outcome {
+  background-color: #fe0044;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  font-size: 40px;
+}
