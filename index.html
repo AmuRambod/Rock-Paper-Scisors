@@ -4,20 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- style.css -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- script.js -->
     <script src="script.js"></script>
+
+    <!-- Font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=League+Gothic&display=swap');
+    </style>
+
     <title>Rock-Paper-Scisors</title>
 </head>
 <body>
+    <!-- main container -->
     <div class="main-container">
-        <div class="score-board"></div>
-        <div class="three-buttons">
-            <div class="move-button rock">Rock</div>
-            <div class="move-button paper">Paper</div>
-            <div class="move-button scisors">Scisors</div>
+
+        <!-- score board -->
+        <div class="score-board">
+            <span>You</span>
+            <!-- scores -->
+            <div class="score">
+                <span id="player-score">0</span>
+                  -  
+                <span id="computer-score">0</span>
+            </div>
+            <span>Computer</span>
         </div>
-        <div class="arena"></div>
-        <div class="outcome"></div>
+
+        <!-- three buttons => rock paper scisors -->
+        <div class="three-buttons">
+            <div class="move-button rock"><span class="emoji">&#x270A</span>Rock</div>
+            <div class="move-button paper"><span class="emoji">&#x270B</span>Paper</div>
+            <div class="move-button scisors"><span class="emoji">&#x270C</span>Scisors</div>
+        </div>
+
+        <!-- arena => area that shows player and computers move -->
+        <div class="arena">
+            <span id="player-move">&#x270A</span>
+            VS
+            <span id="computer-move">&#x270B</span>
+        </div>
+
+        <!-- outcome => you WIN - you LOSE - DRAW -->
+        <div class="outcome">you LOSE!!!</div>
     </div>
 </body>
 </html>
