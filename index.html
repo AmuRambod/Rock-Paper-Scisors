@@ -7,9 +7,6 @@
     <!-- style.css -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- script.js -->
-    <script src="script.js"></script>
-
     <!-- Font -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=League+Gothic&display=swap');
@@ -35,20 +32,28 @@
 
         <!-- three buttons => rock paper scisors -->
         <div class="three-buttons">
-            <div class="move-button rock"><span class="emoji">&#x270A</span>Rock</div>
-            <div class="move-button paper"><span class="emoji">&#x270B</span>Paper</div>
-            <div class="move-button scisors"><span class="emoji">&#x270C</span>Scisors</div>
+            <div class="move-button" id="rock"><span class="emoji">&#x270A</span>Rock</div>
+            <div class="move-button" id="paper"><span class="emoji">&#x270B</span>Paper</div>
+            <div class="move-button" id="scisors"><span class="emoji">&#x270C</span>Scisors</div>
         </div>
 
         <!-- arena => area that shows player and computers move -->
         <div class="arena">
-            <span id="player-move">&#x270A</span>
+            <span id="player-move"></span>
             VS
-            <span id="computer-move">&#x270B</span>
+            <span id="computer-move"></span>
         </div>
 
         <!-- outcome => you WIN - you LOSE - DRAW -->
-        <div class="outcome">you LOSE!!!</div>
+        <div class="outcome"></div>
     </div>
 </body>
+<!-- script.js -->
+<script src="script.js"></script>
+
+<!-- <script>
+    const buttons = document.querySelectorAll(".move-button");
+    // console.log(buttons);
+    buttons.forEach((button) => button.addEventListener("click",()=>alert(button.id))) -->
+</script>
 </html>
