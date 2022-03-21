@@ -1,7 +1,5 @@
-let playerMove = "";
 let playerScore = 0;
 let computerScore = 0;
-
 
 //#region UI part
 
@@ -99,7 +97,7 @@ function computerPlay(){
 //# returns a score with a result message:
 //# +1 for win, -1 for loss and 0 for a draw
 function playRound(){
-    playerMove = this.id;
+    const playerMove = this.id;
     playerEmoji.innerHTML = emojiFy(playerMove);
     const computerMove = computerPlay();
     computerEmoji.innerHTML = emojiFy(computerMove);
