@@ -48,14 +48,20 @@ Users should be able to:
 
 ### Links
 
-Live website preview: [Rock Paper Scisors]()
+Live website preview: [Rock Paper Scisors](https://amurambod.github.io/odin-project-02-RockPaperScisors-/)
 
 ## My Process
 
 ### First Iteration
 
+First iteration did not have a GUI and it was purely a JavaScript app that would run on consol.
+
 ### Second Iteration
 
+Second iteration added a GUI with HTML and CSS and Player moves were received with Graphical buttons instead of prompt boxes.
+
 ## Author
+
+**Rambod Rahimlou**
 
 - GitHub: [Amu Rambod](https://github.com/AmuRambod)
