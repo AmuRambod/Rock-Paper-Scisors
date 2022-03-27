@@ -20,6 +20,9 @@ function emojiFy(move){
     }
 }
 
+//main container
+const mainContainer = document.querySelector(".main-container");
+
 //scores
 const playerScoreBoard = document.querySelector("#player-score");
 const computerScoreBoard = document.querySelector("#computer-score");
@@ -48,13 +51,18 @@ const playerEmoji = document.querySelector("#player-move");
 const computerEmoji = document.querySelector("#computer-move");
 
 //outcome
-const outcome = document.querySelector(".outcome");
+const outcome = document.createElement("div");
+outcome.classList.add("outcome");
+
+
+
+// const outcome = document.querySelector(".outcome");
 
 //#endregion
 
 //#region Rock Paper Scisors functions
 
-//#region computerPlay() => randomly choses rock,paper or scisors
+// computerPlay() => randomly choses rock,paper or scisors
 function computerPlay(){
     let computerMove = Math.floor(Math.random()*3);
     let computerDecision = "";
@@ -75,27 +83,8 @@ function computerPlay(){
     }
     return computerDecision;
 }
-//#endregion
 
-//#region getPlayerMove() => used prompt instead of buttons
-// function getPlayerMove(){
-//     let playerDecision = prompt("Enter your move:").toLowerCase();
-//     return playerDecision;
-// }
-//#endregion
-
-//#region new getPlayerMove() function => uses the buttons 
-
-// function getPlayerMove(e){
-//     playerMove = this.id;
-//     console.log(this);
-// }
-
-//#endregion
-
-//#region new playRound() => gets the player move from the id of the pressed button and plays a round and 
-//# returns a score with a result message:
-//# +1 for win, -1 for loss and 0 for a draw
+// playRound() => gets the player move from the id of the pressed button and plays a round and returns a score with a result message: +1 for win, -1 for loss and 0 for a draw
 function playRound(){
     const playerMove = this.id;
     playerEmoji.innerHTML = emojiFy(playerMove);
@@ -156,74 +145,9 @@ function playRound(){
     }
     console.log(message , result);
     outcome.textContent = message;
+    mainContainer.appendChild(outcome);
     scoreTally(result);
     // return [result,message];
 }
-//#endregion
 
-//#region old playRound()
-
-// function oldPlayRound(computerMove , playerMove){
-//     let result = 0;
-//     let message = "";
-//     if (computerMove === playerMove){
-//         message = `DRAW! we both chose ${computerMove}.`;
-//         result = 0;
-//     }
-//     else{
-//         switch(playerMove){
-//             case "rock":
-//                 if (computerMove == "paper"){
-//                     message = `you LOSE! ${computerMove} beats ${playerMove}.`;
-//                     result = -1;
-//                 }
-//                 else{
-//                     message = `you WIN! ${playerMove} beats ${computerMove}.`;
-//                     result = 1;
-//                 }
-//                 break;
-//             case "paper":
-//                 if (computerMove == "scisors"){
-//                     message = `you LOSE! ${computerMove} beats ${playerMove}.`;
-//                     result = -1;
-//                 }
-//                 else{
-//                     message = `you WIN! ${playerMove} beats ${computerMove}.`;
-//                     result = 1;
-//                 }
-//                 break;
-//             case "scisors":
-//                 if (computerMove == "rock"){
-//                     message = `you LOSE! ${computerMove} beats ${playerMove}.`;
-//                     result = -1;
-//                 }
-//                 else{
-//                     message = `you WIN! ${playerMove} beats ${computerMove}.`;
-//                     result = 1;
-//                 }
-//                 break;
-//             default:
-//                 result = "Something went wrong!!!";
-//                 break;
-//         }
-//     }
-//     return [result,message];
-// }
-//#endregion
-
-//#region old game() function:
-
-// function game(){
-//     let score = 0;
-//     for(let games = 1; games <= 5 ;games++){
-//         const computerMove = computerPlay();
-//         const playerMove = getPlayerMove(); 
-//         score += playRound(computerMove,playerMove)[0];
-//         console.log(playRound(computerMove,playerMove)[1] + `\nscore = ${score}`);
-//     }
-// }
-// game();
-
-//#endregion
-
-//#endregion
+//#endregion Rock Paper Scisors Functions
