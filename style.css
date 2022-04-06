@@ -57,14 +57,18 @@ body {
   padding: 20px;
   flex: 1;
   width: 180px;
-  transition: 0.3s;
+  transition: background-color 0.1s , transform 0.3s , box-Shadow 0.3s;
   cursor: pointer;
 }
 
 .move-button:hover{
-  background-color: #ff668f;
+  /* background-color: #ff668f; */
   transform: scale(1.1);
   box-shadow: 0 0 20px 5px #ffccda;
+}
+
+.move-button:active{
+  background-color: #ff668f;
 }
 
 .emoji {
