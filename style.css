@@ -6,12 +6,17 @@ body {
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template: 95% 5% / 100%;
   background-color: #ffccda;
   color: #ffccda;
   font-family: "League Gothic", sans-serif;
+}
+
+.body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-container {
@@ -33,6 +38,7 @@ body {
   font-size: 30px;
   align-items: center;
   font-family: "Josefin Sans", sans-serif;
+  user-select: none;
 }
 
 .score {
@@ -59,6 +65,7 @@ body {
   width: 180px;
   transition: background-color 0.1s , transform 0.3s , box-Shadow 0.3s;
   cursor: pointer;
+  user-select: none;
 }
 
 .move-button:hover{
@@ -86,6 +93,7 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 35px;
   font-weight: 700;
+  user-select: none;
 }
 
 #player-move,
@@ -99,4 +107,23 @@ body {
   padding: 20px;
   text-align: center;
   font-size: 40px;
+  user-select: none;
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff668f;
+  font-size: 30px;
+}
+
+footer a {
+  text-decoration: none;
+  margin:auto 10px;
+  transition: transform 0.3s;
+}
+
+footer a:hover{
+  transform: scale(1.2);
 }

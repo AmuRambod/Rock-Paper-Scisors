@@ -15,39 +15,44 @@
     <title>Rock✊ Paper✋ Scisors✌</title>
 </head>
 <body>
-    <!-- main container -->
-    <div class="main-container">
-
-        <!-- score board -->
-        <div class="score-board">
-            <span>You</span>
-            <!-- scores -->
-            <div class="score">
-                <span id="player-score">0</span>
-                  -  
-                <span id="computer-score">0</span>
+    <!-- real body -->
+    <div class="body">
+        <!-- main container -->
+        <div class="main-container">
+    
+            <!-- score board -->
+            <div class="score-board">
+                <span>You</span>
+                <!-- scores -->
+                <div class="score">
+                    <span id="player-score">0</span>
+                      -  
+                    <span id="computer-score">0</span>
+                </div>
+                <span>Computer</span>
             </div>
-            <span>Computer</span>
+    
+            <!-- three buttons => rock paper scisors -->
+            <div class="three-buttons">
+                <div class="move-button" id="rock"><span class="emoji">&#x270A</span>Rock</div>
+                <div class="move-button" id="paper"><span class="emoji">&#x270B</span>Paper</div>
+                <div class="move-button" id="scisors"><span class="emoji">&#x270C</span>Scisors</div>
+            </div>
+    
+            <!-- arena => area that shows player and computers move -->
+            <div class="arena">
+                <span id="player-move"></span>
+                VS
+                <span id="computer-move"></span>
+            </div>
+    
+            <!-- outcome => you WIN - you LOSE - DRAW -->
         </div>
-
-        <!-- three buttons => rock paper scisors -->
-        <div class="three-buttons">
-            <div class="move-button" id="rock"><span class="emoji">&#x270A</span>Rock</div>
-            <div class="move-button" id="paper"><span class="emoji">&#x270B</span>Paper</div>
-            <div class="move-button" id="scisors"><span class="emoji">&#x270C</span>Scisors</div>
-        </div>
-
-        <!-- arena => area that shows player and computers move -->
-        <div class="arena">
-            <span id="player-move"></span>
-            VS
-            <span id="computer-move"></span>
-        </div>
-
-        <!-- outcome => you WIN - you LOSE - DRAW -->
-        <!-- <div class="outcome"></div> -->
-        <!-- this part will be added after a player move with JS -->
     </div>
+
+    <!-- footer -->
+    <footer>Challenge by <a href="https://www.theodinproject.com/" target="_blank"> The Odin Project</a> .Created by <a href="https://github.com/AmuRambod" target="_blank"> Amu Rambod</a>.</footer>
+
 </body>
 
 <!-- script.js -->
