@@ -1,3 +1,10 @@
+:root{
+  --light-pink: #ffccda;
+  --normal-pink: #ff668f;
+  --bright-red: #fe0044;
+  --dark-red: #990029;
+}
+
 html,
 body {
   padding: 0;
@@ -8,8 +15,8 @@ body {
 body {
   display: grid;
   grid-template: 95% 5% / 100%;
-  background-color: #ffccda;
-  color: #ffccda;
+  background-color: var(--light-pink);
+  color: var(--light-pink);
   font-family: "League Gothic", sans-serif;
 }
 
@@ -20,7 +27,7 @@ body {
 }
 
 .main-container {
-  background-color: #990029;
+  background-color: var(--dark-red);
   border-radius: 20px;
   padding: 50px;
   display: flex;
@@ -32,7 +39,7 @@ body {
 .score-board {
   display: flex;
   justify-content: space-between;
-  background-color: #fe0044;
+  background-color: var(--bright-red);
   padding: 20px;
   border-radius: 20px;
   font-size: 30px;
@@ -57,7 +64,7 @@ body {
   flex-direction: column;
   text-align: center;
   font-size: 60px;
-  background-color: #fe0044;
+  background-color: var(--bright-red);
   border-radius: 20px;
   gap: 20px;
   padding: 20px;
@@ -69,13 +76,12 @@ body {
 }
 
 .move-button:hover{
-  /* background-color: #ff668f; */
   transform: scale(1.1);
-  box-shadow: 0 0 20px 5px #ffccda;
+  box-shadow: 0 0 20px 5px var(--light-pink);
 }
 
 .move-button:active{
-  background-color: #ff668f;
+  background-color: var(--normal-pink);
 }
 
 .emoji {
@@ -83,7 +89,7 @@ body {
 }
 
 .arena {
-  background-color: #fe0044;
+  background-color: var(--bright-red);
   border-radius: 20px;
   padding: 20px;
   text-align: center;
@@ -102,7 +108,7 @@ body {
 }
 
 .outcome {
-  background-color: #fe0044;
+  background-color: var(--bright-red);
   border-radius: 20px;
   padding: 20px;
   text-align: center;
@@ -114,7 +120,7 @@ footer{
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ff668f;
+  color: var(--normal-pink);
   font-size: 30px;
 }
 
