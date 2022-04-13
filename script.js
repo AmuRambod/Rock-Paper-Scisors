@@ -54,10 +54,6 @@ const computerEmoji = document.querySelector("#computer-move");
 const outcome = document.createElement("div");
 outcome.classList.add("outcome");
 
-
-
-// const outcome = document.querySelector(".outcome");
-
 //#endregion
 
 //#region Rock Paper Scisors functions
