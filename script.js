@@ -26,6 +26,7 @@ const mainContainer = document.querySelector(".main-container");
 //scores
 const playerScoreBoard = document.querySelector("#player-score");
 const computerScoreBoard = document.querySelector("#computer-score");
+scoreTally(2); //on load, this will set scoreboard to 0-0
 
 function scoreTally(result){
     switch(result){
@@ -37,8 +38,22 @@ function scoreTally(result){
             computerScore++;
             computerScoreBoard.textContent = computerScore;
             break;
+        case 2:
+            playerScore = 0;
+            computerScore = 0;
+            playerScoreBoard.textContent = 0;
+            computerScoreBoard.textContent = 0;
         default:
             return;
+    }
+    if (playerScore == 5){
+        //the reason for the 100ms timeout is to give scoreboard a bit of time to update the new scores.
+        setTimeout(()=>declareWinner("You","Computer",playerScore,computerScore),100);
+        return;
+    }
+    if (computerScore == 5){
+        setTimeout(()=>declareWinner("Computer","You",computerScore,playerScore),100)
+        return;
     }
 }
 
@@ -144,6 +159,12 @@ function playRound(){
     mainContainer.appendChild(outcome);
     scoreTally(result);
     // return [result,message];
+}
+
+function declareWinner(winner,loser,winnerScore,loserScore){
+    alert(`${winner} WON!\n finalScore: ${winner} ${winnerScore}-${loserScore} ${loser}`);
+    scoreTally(2); //this will reset the scoreboard yp 0-0
+    mainContainer.removeChild(outcome);
 }
 
 //#endregion Rock Paper Scisors Functions

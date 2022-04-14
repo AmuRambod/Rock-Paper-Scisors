@@ -116,12 +116,15 @@ body {
   user-select: none;
 }
 
+/* footer */
+
 footer{
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--normal-pink);
   font-size: 30px;
+  user-select: none;
 }
 
 footer a {
