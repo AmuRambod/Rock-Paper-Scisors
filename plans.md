@@ -5,8 +5,11 @@
 
 - [x] Must set the `user-select` property to `none` to avoid text highlighting and element selection.
 
-- [ ] Adding media queries for mobile.
+- [x] Adding media queries for mobile.
 
-- [ ] Adding a footer for author github.
+- [x] Adding a footer for author github.
 
 - [ ] Adding a Header.
+
+## Experiments for feature branch
+- [x] converting `px` values to relative lengths.
