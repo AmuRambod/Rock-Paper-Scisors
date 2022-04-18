@@ -11,6 +11,7 @@ A web application for playing rock, paper, scisors. Web-dev learning project fro
 - [My Process](#my-process)
   - [First Iteration](#first-iteration)
   - [Second Iteration](#second-iteration)
+  - [Third Iteration](#third-iteration)
 - [Author](#author)
 
 ## Overview
@@ -59,6 +60,10 @@ First iteration did not have a GUI and it was purely a JavaScript app that would
 ### Second Iteration
 
 Second iteration added a GUI with HTML and CSS and Player moves were received with Graphical buttons instead of prompt boxes.
+
+### Third Iteration
+
+Third iteration added responsiveness for different device widths using `@media` queries. Then added `:hover` and `:active` states to `move-button`s.
 
 ## Author
 

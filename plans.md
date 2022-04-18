@@ -9,7 +9,6 @@
 
 - [x] Adding a footer for author github.
 
-- [ ] Adding a Header.
+- [ ] Adding a Header. Use `font-size: clamp()` for reactive font sizing.
 
 ## Experiments for feature branch
-- [x] converting `px` values to relative lengths.
