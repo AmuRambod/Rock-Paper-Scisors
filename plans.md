@@ -12,3 +12,5 @@
 - [ ] Adding a Header. Use `font-size: clamp()` for reactive font sizing.
 
 ## Experiments for feature branch
+
+ - [ ] Adding a modal for displaying the winner and the final score instead of an alert window.
