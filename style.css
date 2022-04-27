@@ -3,7 +3,7 @@
   --normal-pink: #ff668f;
   --bright-red: #fe0044;
   --dark-red: #990029;
-  font-size: 10px;
+  font-size: clamp(4.5px,0.9vw,11px);
 }
 
 html,
@@ -136,17 +136,4 @@ footer a {
 
 footer a:hover{
   transform: scale(1.2);
-}
-
-/* Media Queries */
-@media screen and (max-width: 850px){
-  :root{
-    font-size: 4px;
-  }
-}
-
-@media screen and (max-width: 350px){
-  :root{
-    font-size: 3px;
-  }
 }
