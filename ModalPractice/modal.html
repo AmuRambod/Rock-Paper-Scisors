@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="modalStyle.css">
+  <title>modal</title>
+</head>
+<body>
+  <button data-modal-target="#modal" class="open-modal">Open Modal!</button>
+  <div class="modal" id="modal">
+    <div class="close-button"><span data-modal-close-button>&times;</span></div>
+    <div class="modal-result">
+        YOU WON! (emoji)
+    </div>
+    <div class="final-score">
+        you 5 - 4 computer
+    </div>
+  </div>
+  <div id="overlay"></div>
+  <script src="modalScript.js"></script>
+</body>
+</html>
