@@ -1,5 +1,7 @@
 # RockPaperScisors notes
 ## Bugs
+- [ ] fix the font sizes in the modal => shitty view in mobile.
+
 ## Plans
 - [x] Game must stop and declare a winner after one side reaches 5 points; and then, score will be 0-0 and a new game will begin.
 
@@ -14,3 +16,5 @@
 ## Experiments for feature branch
 
  - [ ] Adding a modal for displaying the winner and the final score instead of an alert window.
+
+ - [ ] Add the emoji to the winner status in modal
