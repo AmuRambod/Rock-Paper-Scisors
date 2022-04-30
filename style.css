@@ -3,6 +3,7 @@
   --normal-pink: #ff668f;
   --bright-red: #fe0044;
   --dark-red: #990029;
+  --very-dark-red: #33000e;
   font-size: clamp(4.5px,0.9vw,11px);
 }
 
@@ -128,6 +129,8 @@ footer{
   user-select: none;
 }
 
+/* footer */
+
 footer a {
   text-decoration: none;
   margin:auto 1rem;
@@ -136,4 +139,81 @@ footer a {
 
 footer a:hover{
   transform: scale(1.2);
+}
+
+/* modal */
+.modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border-radius: 2rem;
+  z-index: 10;
+  background-color: var(--normal-pink);
+  color: var(--light-pink);
+  padding: 2.5rem;
+  /* width: 70rem;  temp */
+  user-select: none;
+}
+
+.modal.active{
+  transform: translate(-50% , -50%) scale(1);
+}
+
+.modal-header{
+  display: flex;
+  font-size: 8rem;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.modal-result-emoji{
+  font-size: 0.5em;
+  text-shadow:0.5rem 0.5rem 0.5rem var(--very-dark-red);
+}
+
+span[data-modal-close-button]{
+  --close-button-size: 2.5rem;
+  --bg-color: var(--light-pink);
+  color: var(--normal-pink);
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--close-button-size);
+  height: var(--close-button-size);
+  font-size: calc(var(--close-button-size) * 1.8);
+  border: calc(var(--close-button-size) / 10) solid var(--bg-color);
+  border-radius: 50%;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+}
+
+.modal-score-board{
+  display: flex;
+  justify-content: space-between;
+  font-size: 5rem;
+  gap: 10rem;
+}
+
+#overlay{
+  position: fixed;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  background-color: var(--dark-red);
+  pointer-events: none;
+}
+
+#overlay.active{
+  opacity: 0.7;
+  pointer-events: all;
 }

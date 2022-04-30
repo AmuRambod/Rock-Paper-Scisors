@@ -12,6 +12,7 @@ A web application for playing rock, paper, scisors. Web-dev learning project fro
   - [First Iteration](#first-iteration)
   - [Second Iteration](#second-iteration)
   - [Third Iteration](#third-iteration)
+  - [Fourth Iteration](#fourth-iteration)
 - [Author](#author)
 
 ## Overview
@@ -64,6 +65,12 @@ Second iteration added a GUI with HTML and CSS and Player moves were received wi
 ### Third Iteration
 
 Third iteration added responsiveness for different device widths using `@media` queries. Then added `:hover` and `:active` states to `move-button`s.
+
+### Fourth Iteration
+
+In fourth ieration, instead of declaring the winner and showing the results with a `alert` message, It shows it with a modal!
+
+[Where I learned about modals](https://www.youtube.com/watch?v=MBaw_6cPmAw&t=568s)
 
 ## Author
 

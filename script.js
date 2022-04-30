@@ -20,6 +20,29 @@ function emojiFy(move){
     }
 }
 
+//modal
+const modal = document.querySelector("#modal");
+const overlay = document.querySelector("#overlay");
+
+const modalResult = document.querySelector(".modal-result");
+const modalResultEmoji = document.querySelectorAll(".modal-result-emoji");
+const modalFinalScore = document.querySelector(".final-score");
+
+const closeModalButton = document.querySelector("[data-modal-close-button]");
+closeModalButton.addEventListener("click",closeModal);
+
+function openModal(){
+    modal.classList.add("active");
+    overlay.classList.add("active");
+}
+
+function closeModal(){
+    modal.classList.remove("active");
+    overlay.classList.remove("active");
+
+}
+
+
 //main container
 const mainContainer = document.querySelector(".main-container");
 
@@ -48,11 +71,11 @@ function scoreTally(result){
     }
     if (playerScore == 5){
         //the reason for the 100ms timeout is to give scoreboard a bit of time to update the new scores.
-        setTimeout(()=>declareWinner("You","Computer",playerScore,computerScore),100);
+        setTimeout(()=>declareWinner(true , playerScore , computerScore),100);
         return;
     }
     if (computerScore == 5){
-        setTimeout(()=>declareWinner("Computer","You",computerScore,playerScore),100)
+        setTimeout(()=>declareWinner(false , playerScore , computerScore),100)
         return;
     }
 }
@@ -161,8 +184,11 @@ function playRound(){
     // return [result,message];
 }
 
-function declareWinner(winner,loser,winnerScore,loserScore){
-    alert(`${winner} WON!\n finalScore: ${winner} ${winnerScore}-${loserScore} ${loser}`);
+function declareWinner(playerWon,playerScore,computerScore){
+    modalResult.textContent = playerWon ? "YOU WIN!" : "YOU LOSE!";
+    modalFinalScore.textContent = `${playerScore} - ${computerScore}`;
+    openModal();
+
     scoreTally(2); //this will reset the scoreboard yp 0-0
     mainContainer.removeChild(outcome);
 }
