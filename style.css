@@ -127,6 +127,7 @@ footer{
   color: var(--normal-pink);
   font-size: 3rem;
   user-select: none;
+  white-space: nowrap;
 }
 
 /* footer */
@@ -163,7 +164,7 @@ footer a:hover{
 
 .modal-header{
   display: flex;
-  font-size: 8rem;
+  font-size: 6rem;
   justify-content: center;
   gap: 2rem;
   align-items: center;
@@ -197,8 +198,14 @@ span[data-modal-close-button]{
 .modal-score-board{
   display: flex;
   justify-content: space-between;
-  font-size: 5rem;
+  align-items: center;
+  font-size: 4rem;
   gap: 10rem;
+}
+
+span.final-score{
+  font-size: 5rem;
+  white-space: nowrap;
 }
 
 #overlay{
