@@ -17,4 +17,4 @@
 
  - [ ] Adding a modal for displaying the winner and the final score instead of an alert window.
 
- - [ ] Add the emoji to the winner status in modal
+ - [x] Add the emoji to the winner status in modal

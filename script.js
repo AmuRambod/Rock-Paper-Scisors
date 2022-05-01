@@ -7,6 +7,8 @@ let computerScore = 0;
 const rockEmoji = "&#x270A";
 const paperEmoji = "&#x270B";
 const scisorsEmoji = "&#x270C";
+const celebrationEmoji = "🥳";
+const sadEmoji = "😔";
 function emojiFy(move){
     switch(move){
         case "rock":
@@ -186,6 +188,9 @@ function playRound(){
 
 function declareWinner(playerWon,playerScore,computerScore){
     modalResult.textContent = playerWon ? "YOU WIN!" : "YOU LOSE!";
+    modalResultEmoji.forEach(emoji => {
+        emoji.textContent = playerWon ? celebrationEmoji:sadEmoji;
+    })
     modalFinalScore.textContent = `${playerScore} - ${computerScore}`;
     openModal();
 
